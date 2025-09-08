@@ -1,0 +1,40 @@
+name: WeMovie tests
+on:
+  # seta gatilhos de disparo
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  # define os job a executar
+  workflow_dispatch: 
+jobs:
+  e2e-tests.ts:
+    timeout-minutes: 60
+    # define a imagem 
+    runs-on: ubuntu-latest
+    steps:
+    # baixa o projeto
+    - name: Get code
+      uses: actions/checkout@v4
+    # prepara o node.js
+    - name: Install node18
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    # configura dependencias do projeto
+    - name: Install dependencies
+      run: npm i
+    
+    - name: Install the playwright browsers
+      run: npx playwright install --with-deps
+    # executa os testes
+    - name: Run E2E tests
+      run: npx playwright test
+    # configura upload dos relatorios de execucao
+    - name: Publish HTML reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
