@@ -19,6 +19,7 @@
 5. Confira a massa de teste que deseja ser utilizada (com os dados corretos do filme), no arquivo tests/fixtures/movie.json 
 
    Para executar de forma assistida: _yarn test:e2e:headed_
+   
    Para executar em modo headless: _yarn test:e2e_
 
 OBS: os testes irão executar no G. Chrome e M. Firefox. Em seguida, será exibido relatórios HTML no seu navegador padrão.
