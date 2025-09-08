@@ -31,4 +31,5 @@ Depois de clonado e configurado em sua máquina, execute os comandos Git para ef
 Após concluir, logo abaixo, estará disponível no link 'playwright-report' as evidências de execução.
 
 
-Enjoy ;)
+Enjoy it!
+
