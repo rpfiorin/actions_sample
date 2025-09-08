@@ -31,7 +31,7 @@ test.beforeEach(({ page }) => {
  * @expected filme excluido
  */
 test.describe('CN09 - Decremento/exclusão de filme adicionado', () => {
-    test.only('[WF-09] Decrementar ou excluir filme do carrinho', async ({ page }) => {
+    test('[WF-09] Decrementar ou excluir filme do carrinho', async ({ page }) => {
         if (! await cartPage.productText(page).isVisible()) {
             await moviesPage.addMovie(page, movie.name)
 

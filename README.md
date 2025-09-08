@@ -1,4 +1,6 @@
-![poster](./.github/logo.png)
+<p align="center">
+  <img src="./.github/logo.png" alt="poster">
+</p>
 
 # Desafio de QA - Testes front-end E2E
 

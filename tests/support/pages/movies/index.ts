@@ -16,7 +16,7 @@ export class MoviesPage {
         const title = page.locator(`div.sc-eqYatC:has(h3:has-text("${movie}"))`)
         await title.locator('button:has-text("Adicionar ao carrinho")').click()
 
-        // redireciona ao carrinho apos adicionar filme
+        // redireciona ao carrinho apos adicionar o filme
         await page.getByText('Meu Carrinho').click()
     }
 }
