@@ -8,7 +8,7 @@ on:
   # define os job a executar
   workflow_dispatch: 
 jobs:
-  e2e-tests.ts:
+  ts-tests:
     timeout-minutes: 60
     # define a imagem 
     runs-on: ubuntu-latest

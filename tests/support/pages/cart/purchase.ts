@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test"
 
-// POM do carrinho
+// POM do carrinho de compra
 export class CartPage {
     readonly page: Page
     constructor(page: Page) {
@@ -25,10 +25,10 @@ export class CartPage {
     async decreaseMovie(page: Page, useBin: boolean) {
         if (useBin) {
             // clicara na lixeira
-
+            await page.locator('button.trash-btn').click()
         } else {
             // clicara no sinal de menos
-            await page.locator('svg[width="18"][height="18"]').nth(0).click();
+            await page.locator('svg[width="18"][height="18"]').nth(0).click()
         }
     }
     async increaseMovie(page: Page) {

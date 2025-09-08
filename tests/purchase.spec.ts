@@ -27,7 +27,7 @@ test.beforeEach(({ page }) => {
  * @steps
  *  1. verifica se carrinho esta vazio, caso contrario, realiza a exclusao por meio da lixeira
  *  2. se vazio, adiciona algum filme e redireciona ao carrinho
- *  3. clica no botao ' - '
+ *  3. clica no botao ' - ' (menos)
  * @expected filme excluido
  */
 test.describe('CN09 - Decremento/exclusão de filme adicionado', () => {
@@ -36,13 +36,11 @@ test.describe('CN09 - Decremento/exclusão de filme adicionado', () => {
             await moviesPage.addMovie(page, movie.name)
 
             await cartPage.decreaseMovie(page, false)
-
-
         }
         else {
             await cartPage.decreaseMovie(page, true)
-            // colocar assert de texto 'Parece que não há nada por aqui :('
         }
+        await expect(cartPage.emptyCartMessage(page)).toBeVisible()
     })
 })
 
@@ -51,17 +49,17 @@ test.describe('CN09 - Decremento/exclusão de filme adicionado', () => {
  * @precondition ter a massa de teste definida
  * @steps
  *  1. adiciona algum filme e redireciona ao carrinho
- *  2. clica no botao ' + '
+ *  2. clica no botao ' + ' (mais)
  *  3. valida preco recalculado
  * @expected filme com quantia incrementada
  */
 test.describe('CN10 - Incremento da quantia de filme adicionado', () => {
-    test.only('[WF-10] Incrementar quantia do filme adicionado', async ({ page }) => {
+    test('[WF-10] Incrementar quantia do filme adicionado', async ({ page }) => {
         await moviesPage.addMovie(page, movie.name)
 
         await cartPage.increaseMovie(page)
         const updatedPrice = newPrice(movie.price, 2)
 
-        await expect(cartPage.checkTotalValue(page, updatedPrice)).toBeVisible();
+        await expect(cartPage.checkTotalValue(page, updatedPrice)).toBeVisible()
     })
 })

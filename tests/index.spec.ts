@@ -5,6 +5,7 @@ import { MoviesPage } from './support/pages/movies/index'
 import { CartPage } from './support/pages/cart/purchase'
 
 import { MovieModel } from './fixtures/movie.model'
+// carrega arquivo da massa de teste definida
 import data from './fixtures/movie.json'
 
 // variaveis de instancia
@@ -21,7 +22,7 @@ test.beforeEach(({ page }) => {
  * @test fluxo de pedido no e-commerce
  * @precondition ter a massa de teste definida e visitar a home com navegador suportado
  * @steps
- *  1. clica no botao de adicionar ao carrinho no respectivo filme a testar
+ *  1. visita a home e clica no botao de adicionar ao carrinho no respectivo filme a testar
  *  2. redireciona para o carrinho
  *  3. finaliza o pedido
  * @expected filme escolhido presente no carrinho, exibindo mensagem de sucesso ao finalizar
