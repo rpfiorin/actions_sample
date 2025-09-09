@@ -27,7 +27,7 @@ Toda a codificação do projeto foi comentada para fácil compreensão e documen
 
 ## Extra ➕
 Como bônus, escalei os testes aqui presentes no Github Actions. Para reproduzi-los, faça o fork deste projeto para seu repositório Github.
-Depois de clonado e configurado em sua máquina, execute os comandos Git para efetuar o push e assim disparar a pipeline. Na página do projeto em seu Github, acesse a aba 'Actions'. Um estágio denominado 'ts-tests' deverá estar sendo executado, aguarde sua conclusão.
+Depois de clonado e configurado em sua máquina, execute os comandos Git para efetuar o _push_ e assim disparar a pipeline. Na página do projeto em seu Github, acesse a aba 'Actions'. Um estágio denominado 'ts-tests' deverá estar sendo executado, aguarde sua conclusão.
 Após concluir, logo abaixo, estará disponível no link 'playwright-report' as evidências de execução.
 
 
