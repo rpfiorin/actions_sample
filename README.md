@@ -5,7 +5,7 @@
 # Desafio de QA - Testes front-end E2E
 
 ## Preparação 📍
-1. Primeiramente, clone este projeto com opção HTTPS ou SSH. Em 'atividade_1/Especificações de Teste.pdf' está a solução proposta para a 1º parte do desafio.
+1. Primeiramente, clone este projeto com opção HTTPS ou SSH. Em 'atividade_1/Especificações de Testes.pdf' está a solução proposta para a 1º parte do desafio.
 2. A automação (2º parte) foi desenvolvida em cima da versão 18 do node, logo, certifique-se de estar com esta versão em seu SO ou instale-a pelo diretório 'node' (caso utilize Windows). Para linux, consulte o respectivo procedimento de acordo com a distribuição utilizada.
 3. Como gerenciador de pacotes, utilizei o yarn, então após a instalação do node 18, execute seu CMD como Admin e rode o comando: _corepack enable_ 
  (Isso o ativará em seu SO, caso solicite confirmação, aceite com a opção correspondente).
