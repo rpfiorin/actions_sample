@@ -12,7 +12,7 @@ export async function visitWebMovies(page: Page) {
     await page.goto(`${BASE_URL}/`, { waitUntil: 'commit' })
 }
 export async function visitCart(page: Page) {
-    await page.goto(`${BASE_URL}/cart`)
+    await page.goto(`${BASE_URL}/cart`, { waitUntil: 'commit' })
 }
 export function newPrice(subtotal: number, amount: number) {
     const finalPrice = subtotal * amount
